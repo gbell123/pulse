@@ -4,9 +4,9 @@ services:
     image: pulse
     build: .
     volumes:
-      - type: volume
-        source: .
-        target: /tmp
-
-volumes:
-  .:
+      - type: bind
+        source: ./gifs
+        target: /tmp/gifs
+      - type: bind
+        source: ./maps
+        target: /tmp/maps
