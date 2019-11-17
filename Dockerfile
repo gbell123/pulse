@@ -1,7 +1,11 @@
 FROM thinkwhere/gdal-python
 
-COPY . .
+ADD requirements.txt /pulse/
+
+WORKDIR /pulse
 
 RUN pip install -r requirements.txt
+
+COPY . /pulse/
 
 CMD ["python", "./test.py"]

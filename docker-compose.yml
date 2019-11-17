@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  pulse:
+    image: pulse
+    build: .
+    volumes:
+      - type: volume
+        source: .
+        target: /tmp
+
+volumes:
+  .:
